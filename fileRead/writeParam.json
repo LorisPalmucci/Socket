@@ -1,0 +1,24 @@
+{
+    "pc": {
+        "nome": "loris",
+        "cognome": "palmucci"
+    },
+    "uso": "lavoro",
+    "azienda": "PapIndustries",
+    "serial": 45649392220567,
+    "installed-app": [
+        "code",
+        "obsidian",
+        "python"
+    ],
+    "script": [
+        {
+            "nome-script": "alarm-generator",
+            "autore": "hugo"
+        },
+        {
+            "nome-script": "JsonMaker",
+            "autore": "Loris"
+        }
+    ]
+}
