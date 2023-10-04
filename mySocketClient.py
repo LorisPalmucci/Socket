@@ -1,6 +1,7 @@
 import socket
 from fileRead.myjson import readJson
 import json
+import sys
 
 def createSocket():
     print('Create connection...')
@@ -17,13 +18,14 @@ def connect(socket, host, port):
     print('connesso a: ',host, port)
 
 def sendFile(sock):
-    print('Send file...')
     data = json.dumps(readJson(), indent=4)
+    if (data == 'null'):
+        exit()
     dataBytes = bytes(data.encode('utf-8'))
+    print('Send file...')
     sock.sendall(dataBytes)
     print('COMPLETE')
 
 if __name__ == "__main__":
-
     c = createSocket()
     sendFile(c)
