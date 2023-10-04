@@ -13,7 +13,7 @@ def createSocket():
     print('OK')
     print('Start Server...')
     mySock.bind((HOST, PORT))
-    mySock.listen(5)
+    mySock.listen(2)
     print('Server is listen on:', PORT)
     acceptConnection(mySock)
 
@@ -31,8 +31,9 @@ def receiveData(conn, addr):
                 print('Receiving data...')
                 data = conn.recv(1024)
                 create_file(data)
-                if not data: break
-            print('Transfer COMPLETE')
+                if not data: 
+                    break
+                print('Transfer COMPLETE')
 
 
 if __name__ == "__main__":
