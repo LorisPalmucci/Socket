@@ -1,7 +1,7 @@
 import socket
 
 def create_file(rcvData):
-    with open('/Users/palm/Desktop/rcv_File.txt', 'a') as file:
+    with open('C:\\Users\\User\\Desktop\\rcv_File.txt','a') as file:
         d = str(rcvData)
         file.write(d)
 
